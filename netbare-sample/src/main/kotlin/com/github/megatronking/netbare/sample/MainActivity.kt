@@ -3,7 +3,7 @@ package com.github.megatronking.netbare.sample
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import com.github.megatronking.netbare.NetBare
 import com.github.megatronking.netbare.NetBareConfig
@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity(), NetBareListener {
                 interceptorFactories()))
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_PREPARE) {

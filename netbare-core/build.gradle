@@ -1,13 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 33
     }
 
     buildTypes {
@@ -16,15 +14,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'com.github.megatronking.netbare'
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
 
-    implementation 'org.bouncycastle:bcpkix-jdk15on:1.56'
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
-    implementation 'com.google.guava:guava:19.0'
+    implementation 'org.bouncycastle:bcpkix-jdk15on:1.67'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.67'
+    implementation 'com.google.guava:guava:24.1-jre'
 }
